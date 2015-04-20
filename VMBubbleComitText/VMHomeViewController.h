@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VMHomeViewController.h
 //  VMBubbleComitText
 //
 //  Created by Vu Mai on 4/20/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface VMHomeViewController : UIViewController
 
 @end
-

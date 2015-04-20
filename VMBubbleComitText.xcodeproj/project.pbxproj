@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		27F843251AE56330009F8393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843241AE56330009F8393 /* main.m */; };
 		27F843281AE56330009F8393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843271AE56330009F8393 /* AppDelegate.m */; };
-		27F8432B1AE56330009F8393 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F8432A1AE56330009F8393 /* ViewController.m */; };
 		27F8432E1AE56330009F8393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F8432C1AE56330009F8393 /* Main.storyboard */; };
 		27F843301AE56330009F8393 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F8432F1AE56330009F8393 /* Images.xcassets */; };
 		27F843331AE56330009F8393 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F843311AE56330009F8393 /* LaunchScreen.xib */; };
 		27F8433F1AE56330009F8393 /* VMBubbleComitTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F8433E1AE56330009F8393 /* VMBubbleComitTextTests.m */; };
+		27F8434A1AE563E8009F8393 /* VMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843491AE563E8009F8393 /* VMHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		27F843241AE56330009F8393 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27F843261AE56330009F8393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27F843271AE56330009F8393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27F843291AE56330009F8393 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27F8432A1AE56330009F8393 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		27F8432D1AE56330009F8393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27F8432F1AE56330009F8393 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27F843321AE56330009F8393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		27F843381AE56330009F8393 /* VMBubbleComitTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMBubbleComitTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F8433D1AE56330009F8393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F8433E1AE56330009F8393 /* VMBubbleComitTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMBubbleComitTextTests.m; sourceTree = "<group>"; };
+		27F843481AE563E8009F8393 /* VMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMHomeViewController.h; sourceTree = "<group>"; };
+		27F843491AE563E8009F8393 /* VMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				27F843261AE56330009F8393 /* AppDelegate.h */,
 				27F843271AE56330009F8393 /* AppDelegate.m */,
-				27F843291AE56330009F8393 /* ViewController.h */,
-				27F8432A1AE56330009F8393 /* ViewController.m */,
 				27F8432C1AE56330009F8393 /* Main.storyboard */,
 				27F8432F1AE56330009F8393 /* Images.xcassets */,
 				27F843311AE56330009F8393 /* LaunchScreen.xib */,
 				27F843221AE56330009F8393 /* Supporting Files */,
+				27F843481AE563E8009F8393 /* VMHomeViewController.h */,
+				27F843491AE563E8009F8393 /* VMHomeViewController.m */,
 			);
 			path = VMBubbleComitText;
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27F8432B1AE56330009F8393 /* ViewController.m in Sources */,
 				27F843281AE56330009F8393 /* AppDelegate.m in Sources */,
+				27F8434A1AE563E8009F8393 /* VMHomeViewController.m in Sources */,
 				27F843251AE56330009F8393 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
