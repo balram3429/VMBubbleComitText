@@ -14,6 +14,11 @@
 		27F843331AE56330009F8393 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F843311AE56330009F8393 /* LaunchScreen.xib */; };
 		27F8433F1AE56330009F8393 /* VMBubbleComitTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F8433E1AE56330009F8393 /* VMBubbleComitTextTests.m */; };
 		27F8434A1AE563E8009F8393 /* VMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843491AE563E8009F8393 /* VMHomeViewController.m */; };
+		27F8434F1AE56616009F8393 /* VMBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F8434E1AE56616009F8393 /* VMBubble.m */; };
+		27F843521AE566F0009F8393 /* VMArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843511AE566F0009F8393 /* VMArrow.m */; };
+		27F843551AE56739009F8393 /* VMBoderArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843541AE56739009F8393 /* VMBoderArrow.m */; };
+		27F843581AE5674E009F8393 /* VMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843571AE5674E009F8393 /* VMFrame.m */; };
+		27F8435B1AE5676F009F8393 /* VMBubbleText.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F8435A1AE5676F009F8393 /* VMBubbleText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		27F8433E1AE56330009F8393 /* VMBubbleComitTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMBubbleComitTextTests.m; sourceTree = "<group>"; };
 		27F843481AE563E8009F8393 /* VMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMHomeViewController.h; sourceTree = "<group>"; };
 		27F843491AE563E8009F8393 /* VMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMHomeViewController.m; sourceTree = "<group>"; };
+		27F8434D1AE56616009F8393 /* VMBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBubble.h; sourceTree = "<group>"; };
+		27F8434E1AE56616009F8393 /* VMBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBubble.m; sourceTree = "<group>"; };
+		27F843501AE566F0009F8393 /* VMArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMArrow.h; sourceTree = "<group>"; };
+		27F843511AE566F0009F8393 /* VMArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMArrow.m; sourceTree = "<group>"; };
+		27F843531AE56739009F8393 /* VMBoderArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBoderArrow.h; sourceTree = "<group>"; };
+		27F843541AE56739009F8393 /* VMBoderArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBoderArrow.m; sourceTree = "<group>"; };
+		27F843561AE5674E009F8393 /* VMFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMFrame.h; sourceTree = "<group>"; };
+		27F843571AE5674E009F8393 /* VMFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMFrame.m; sourceTree = "<group>"; };
+		27F843591AE5676F009F8393 /* VMBubbleText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBubbleText.h; sourceTree = "<group>"; };
+		27F8435A1AE5676F009F8393 /* VMBubbleText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBubbleText.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,8 @@
 		27F843211AE56330009F8393 /* VMBubbleComitText */ = {
 			isa = PBXGroup;
 			children = (
+				27F8434C1AE565E0009F8393 /* Make Bubble */,
+				27F8434B1AE565CF009F8393 /* Bubble */,
 				27F843261AE56330009F8393 /* AppDelegate.h */,
 				27F843271AE56330009F8393 /* AppDelegate.m */,
 				27F8432C1AE56330009F8393 /* Main.storyboard */,
@@ -117,6 +134,30 @@
 				27F8433D1AE56330009F8393 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27F8434B1AE565CF009F8393 /* Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				27F8434D1AE56616009F8393 /* VMBubble.h */,
+				27F8434E1AE56616009F8393 /* VMBubble.m */,
+			);
+			name = Bubble;
+			sourceTree = "<group>";
+		};
+		27F8434C1AE565E0009F8393 /* Make Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				27F843501AE566F0009F8393 /* VMArrow.h */,
+				27F843511AE566F0009F8393 /* VMArrow.m */,
+				27F843531AE56739009F8393 /* VMBoderArrow.h */,
+				27F843541AE56739009F8393 /* VMBoderArrow.m */,
+				27F843561AE5674E009F8393 /* VMFrame.h */,
+				27F843571AE5674E009F8393 /* VMFrame.m */,
+				27F843591AE5676F009F8393 /* VMBubbleText.h */,
+				27F8435A1AE5676F009F8393 /* VMBubbleText.m */,
+			);
+			name = "Make Bubble";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F8434F1AE56616009F8393 /* VMBubble.m in Sources */,
 				27F843281AE56330009F8393 /* AppDelegate.m in Sources */,
 				27F8434A1AE563E8009F8393 /* VMHomeViewController.m in Sources */,
+				27F843551AE56739009F8393 /* VMBoderArrow.m in Sources */,
+				27F843581AE5674E009F8393 /* VMFrame.m in Sources */,
+				27F8435B1AE5676F009F8393 /* VMBubbleText.m in Sources */,
+				27F843521AE566F0009F8393 /* VMArrow.m in Sources */,
 				27F843251AE56330009F8393 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

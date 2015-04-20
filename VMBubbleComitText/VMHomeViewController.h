@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface VMHomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIView *menuBar;
 
+@property (nonatomic, strong) UIImage *originalImage;
 @end
