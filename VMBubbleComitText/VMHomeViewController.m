@@ -7,11 +7,16 @@
 //
 
 #import "VMHomeViewController.h"
+#import "VMBubbleText.h"
+#import "VMEditView.h"
+#import "VMColorPickerView.h"
+@interface VMHomeViewController () <VMBubbleTextDelegate,VMEditViewDelegate,VMColorPickerViewDelegate>
 
-@interface VMHomeViewController ()
 @property (nonatomic, strong) UIButton *butAddNewBubble;
 @property (nonatomic, strong) UIView *viewMenuBubble;
 @property (nonatomic) BOOL isShowMenuBubble;
+@property (nonatomic) BOOL isShowEditBubble;
+@property (nonatomic) BOOL isShowColorPicker;
 
 @property (nonatomic) NSInteger numOfBubbleOvalInView;
 
@@ -21,7 +26,13 @@
 @property (nonatomic) CGPoint currentCenterAfterEditText;
 @property (nonatomic) NSInteger heightOfKeyboard;
 @property (nonatomic) CGPoint currentCenter;
+
+@property (nonatomic, strong) VMEditView *editView;
+@property (nonatomic, strong) VMColorPickerView *colorPicker;
+
 @property (nonatomic) NSInteger typeOfChange;
+
+@property (nonatomic, strong) UIButton *butExportImage;
 
 @end
 
@@ -29,9 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initImageViewWithContent];
-    [self initMenuBar];
-    [self initMenuBubble];
+    
     [self setup];
     
     // Do any additional setup after loading the view.
@@ -39,13 +48,44 @@
 
 -(void)setup
 {
+    [self initMenuBubble];
+    
     self.numOfBubbleOvalInView = 0;
     [self.viewMenuBubble setAlpha:0];
     self.isShowMenuBubble = NO;
+    self.isShowEditBubble = NO;
+    self.isShowColorPicker = NO;
     self.heightOfKeyboard = 216;
+    
+    [self initMenuBar];
     [self initCirclePanView];
     [self initView];
+    [self initEditView];
     [self hideEditBubble];
+    [self initColorPicker];
+    [self initExportImage];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+}
+
+-(void)initExportImage
+{
+    self.butExportImage = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    [self.butExportImage setImage:[UIImage imageNamed:@"iconExport.png"] forState:UIControlStateNormal];
+    [self.butExportImage setCenter:CGPointMake(CGRectGetWidth(self.view.bounds) - 50, 40)];
+    [self.butExportImage addTarget:self action:@selector(clickExport:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.butExportImage];
+    
+}
+
+-(void)initEditView
+{
+    self.editView = [[VMEditView alloc] initWithFrame:CGRectMake(0, 0, 225, 40)];
+    [self.editView setDelegate:self];
+    [self.imgView addSubview:self.editView];
 }
 
 -(void)initView
@@ -54,11 +94,12 @@
     [self.view addGestureRecognizer:tap];
 }
 
-- (void) initImageViewWithContent
+-(void)initColorPicker
 {
-    self.imgView.image = self.originalImage;
-    [self.imgView setBackgroundColor:[UIColor blackColor]];
-    
+    self.colorPicker = [[VMColorPickerView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 151, self.view.bounds.size.width, 100)];
+    [self.colorPicker setDelegate:self];
+    [self.colorPicker setAlpha:0];
+    [self.view addSubview:self.colorPicker];
 }
 
 -(void)initCirclePanView
@@ -120,8 +161,7 @@
 -(void)makeBubbleWithType:(NSInteger)type
 {
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveBubble:)];
-    VMBubbleOval *draw = [[VMBubbleOval alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
-    
+    VMBubbleText *draw = [[VMBubbleText alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
     draw.backgroundColor = [UIColor whiteColor];
     draw.boderColor = [UIColor blackColor];
     draw.typeOfBubble = type;
@@ -151,7 +191,7 @@
 {
     for (UIView *vi  in self.imgView.subviews) {
         if (vi.tag == self.tagCurrentView) {
-            VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
             [drawBu showPanResizeView];
             break;
         }
@@ -169,7 +209,7 @@
 {
     for (UIView *vi  in self.imgView.subviews) {
         if (vi.tag == self.tagCurrentView && vi.tag != 0) {
-            VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
             [drawBu hidePanResizeView];
             break;
         }
@@ -295,7 +335,7 @@
         
         for (UIView *vi  in self.imgView.subviews) {
             if (vi.tag == self.tagCurrentView) {
-                VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+                VMBubbleText*drawBu = (VMBubbleText*)vi;
                 [drawBu moveArrowWithCenterPanView:[drawBu convertPoint:pan.view.center fromView:self.view]];
             }
         }
@@ -303,7 +343,7 @@
     if (pan.state == UIGestureRecognizerStateBegan) {
         for (UIView *vi  in self.imgView.subviews) {
             if (vi.tag == self.tagCurrentView) {
-                VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+                VMBubbleText*drawBu = (VMBubbleText*)vi;
                 [drawBu setCenterOfPanView];
             }
         }
@@ -324,7 +364,7 @@
     if (pan.state == UIGestureRecognizerStateChanged) {
         for (UIView *vi  in self.imgView.subviews) {
             if (vi.tag == self.tagCurrentView) {
-                VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+                VMBubbleText*drawBu = (VMBubbleText*)vi;
                 drawBu.center = [pan locationInView:self.view];
                 [self.panView setCenter:[drawBu returnCenterLocationView]];
                 [self.editView setCenter:CGPointMake(drawBu.center.x, drawBu.center.y - drawBu.bounds.size.height/2 - self.editView.bounds.size.height/2)];
@@ -346,7 +386,7 @@
 }
 
 #pragma mark - VMBubble Delegate
--(void)getCenterArrowInView:(VMBubbleOval *)bubbleTest withCenter:(CGPoint)ct
+-(void)VMBubbleText:(VMBubbleText *)bubbleTest getCenterArrowInViewCenter:(CGPoint)ct
 {
     self.currentCenter = bubbleTest.center;
     
@@ -356,11 +396,11 @@
     
     for (UIView *vi  in self.imgView.subviews) {
         if (vi.tag != self.tagCurrentView && vi.tag >=2000 &&vi.tag<=2100) {
-            VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
             [drawBu hidePanResizeView];
         }
         if (vi.tag == self.tagCurrentView && vi.tag >=2000 &&vi.tag<=2100) {
-            VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
             [drawBu showPanResizeView];
         }
     }
@@ -376,19 +416,19 @@
     
 }
 
--(void)changeAllViewWheResize:(VMBubbleOval *)bubbleTest withCenter:(CGPoint)ct
+-(void)VMBubbleText:(VMBubbleText *)bubbleTest changeAllViewWheResizeWithCenter:(CGPoint)ct
 {
     [self.panView setCenter:ct];
     [self.editView setCenter:CGPointMake(bubbleTest.center.x, bubbleTest.center.y - bubbleTest.bounds.size.height/2 - self.editView.bounds.size.height/2)];
     self.tagCurrentView = bubbleTest.tag;
 }
 
--(void)hidekeyboardInView:(VMBubbleOval *)bubbleTest
+-(void)HidekeyboardInView:(VMBubbleText *)bubbleTest
 {
     for (UIView *vi  in self.imgView.subviews) {
         if (vi.tag == self.tagCurrentView) {
             
-            VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
             [UIView animateWithDuration:0.3 animations:^{
                 drawBu.center = self.currentCenterAfterEditText;
                 [self.panView setCenter:[drawBu returnCenterLocationView]];
@@ -400,28 +440,113 @@
     }
 }
 
--(void)getCenterView:(VMBubbleOval *)bubbleTest
+-(void)GetCenterView:(VMBubbleText *)bubbleTest
 {
     self.currentCenter = bubbleTest.center;
 }
 
--(void)setCenterWhenResizeView:(VMBubbleOval *)bubbleTest
+-(void)SetCenterWhenResizeView:(VMBubbleText *)bubbleTest
 {
     for (UIView *vi  in self.imgView.subviews) {
         if (vi.tag == bubbleTest.tag) {
-            VMBubbleOval*drawBu = (VMBubbleOval*)vi;
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
             [drawBu setCenter:CGPointMake(self.currentCenter.x,self.currentCenter.y)];
         }
     }
 }
 
+#pragma mark - VMEditView delegate
+-(void)VMEditViewClickButBackgroundColor:(VMEditView *)editView
+{
+    [self showColorPicker];
+    self.typeOfChange = 2;
+    [self.colorPicker setPikerName:@"Background Color"];
+}
 
-//
-//#pragma mark - keyboard
-//- (void)keyboardWasShown:(NSNotification *)notification
-//{
-//    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-//    self.heightOfKeyboard = MIN(keyboardSize.height,keyboardSize.width);
-//}
+-(void)VMEditViewClickButBoderColor:(VMEditView *)editView
+{
+    [self showColorPicker];
+    self.typeOfChange = 3;
+    [self.colorPicker setPikerName:@"Boder Color"];
+}
 
+-(void)VMEditViewClickButContentText:(VMEditView *)editView
+{
+    for (UIView *vi  in self.imgView.subviews) {
+        if (vi.tag == self.tagCurrentView) {
+            
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
+            [drawBu editTextWithKeyboard];
+            self.currentCenterAfterEditText = drawBu.center;
+            NSLog(@"current center : %f, hehehehe: %f ",drawBu.center.y, (CGRectGetHeight(self.view.frame) - self.heightOfKeyboard));
+            if (drawBu.center.y >= (CGRectGetHeight(self.view.frame) - self.heightOfKeyboard - 50))
+            {
+                [UIView animateWithDuration:0.3 animations:^{
+                    drawBu.center = CGPointMake(CGRectGetWidth(self.view.frame)/2, CGRectGetHeight(self.view.frame)/2);
+                    [self.panView setCenter:[drawBu returnCenterLocationView]];
+                    [self.editView setCenter:CGPointMake(drawBu.center.x, drawBu.center.y - drawBu.bounds.size.height/2 - self.editView.bounds.size.height/2)];
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }
+            
+            break;
+        }
+    }
+}
+
+-(void)VMEditViewClickButRemove:(VMEditView *)editView
+{
+    for (UIView *vi  in self.imgView.subviews) {
+        if (vi.tag == self.tagCurrentView) {
+            VMBubbleText*drawBu = (VMBubbleText*)vi;
+            [drawBu removeFromSuperview];
+            break;
+        }
+    }
+    [self hideEditBubble];
+}
+
+-(void)VMEditViewClickButTextColor:(VMEditView *)editView
+{
+    [self showColorPicker];
+    self.typeOfChange = 1;
+    [self.colorPicker setPikerName:@"Text Color"];
+}
+
+#pragma mark - color picker view delegate
+-(void)VMColorPickerViewClickReturnColor:(VMColorPickerView *)colorPicker withReturnColor:(UIColor *)color
+{
+    NSLog(@"Color return:");
+    VMBubbleText*drawBu;
+    for (UIView *vi  in self.imgView.subviews) {
+        if (vi.tag == self.tagCurrentView) {
+            drawBu = (VMBubbleText*)vi;
+            break;
+        }
+    }
+    
+    switch (self.typeOfChange) {
+        case 1:
+            [drawBu.textView setTextColor:color];
+            break;
+        case 2:
+            [drawBu setBackgroundColor:color];
+            [drawBu changeBackgroundColor];
+            break;
+        case 3:
+            [drawBu setBoderColor:color];
+            [drawBu changeBoderColor];
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - keyboard
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    self.heightOfKeyboard = MIN(keyboardSize.height,keyboardSize.width);
+}
 @end

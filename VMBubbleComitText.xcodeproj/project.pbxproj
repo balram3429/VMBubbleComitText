@@ -7,6 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270C583B1AE60AD900FD0CFE /* humanLove.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 270C583A1AE60AD900FD0CFE /* humanLove.jpg */; };
+		270C58491AE6127500FD0CFE /* VMColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 270C58461AE6127500FD0CFE /* VMColorPickerView.m */; };
+		270C584A1AE6127500FD0CFE /* VMEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 270C58481AE6127500FD0CFE /* VMEditView.m */; };
+		270C586D1AE613C100FD0CFE /* iconBubbleCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C584B1AE613C100FD0CFE /* iconBubbleCircle@2x.png */; };
+		270C586E1AE613C100FD0CFE /* iconBubbleCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C584C1AE613C100FD0CFE /* iconBubbleCircle@3x.png */; };
+		270C586F1AE613C100FD0CFE /* iconBubbleCloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C584D1AE613C100FD0CFE /* iconBubbleCloud@2x.png */; };
+		270C58701AE613C100FD0CFE /* iconBubbleCloud@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C584E1AE613C100FD0CFE /* iconBubbleCloud@3x.png */; };
+		270C58711AE613C100FD0CFE /* iconBubbleOval@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C584F1AE613C100FD0CFE /* iconBubbleOval@2x.png */; };
+		270C58721AE613C100FD0CFE /* iconBubbleOval@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58501AE613C100FD0CFE /* iconBubbleOval@3x.png */; };
+		270C58731AE613C100FD0CFE /* iconBubbleSquares@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58511AE613C100FD0CFE /* iconBubbleSquares@2x.png */; };
+		270C58741AE613C100FD0CFE /* iconBubbleSquares@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58521AE613C100FD0CFE /* iconBubbleSquares@3x.png */; };
+		270C58751AE613C100FD0CFE /* iconBubbleStars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58531AE613C100FD0CFE /* iconBubbleStars@2x.png */; };
+		270C58761AE613C100FD0CFE /* iconBubbleStars@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58541AE613C100FD0CFE /* iconBubbleStars@3x.png */; };
+		270C58771AE613C100FD0CFE /* iconChangeBackgroundBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58551AE613C100FD0CFE /* iconChangeBackgroundBubble@2x.png */; };
+		270C58781AE613C100FD0CFE /* iconChangeBackgroundBubble@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58561AE613C100FD0CFE /* iconChangeBackgroundBubble@3x.png */; };
+		270C58791AE613C100FD0CFE /* iconChangeBoderColor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58571AE613C100FD0CFE /* iconChangeBoderColor@2x.png */; };
+		270C587A1AE613C100FD0CFE /* iconChangeBoderColor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58581AE613C100FD0CFE /* iconChangeBoderColor@3x.png */; };
+		270C587B1AE613C100FD0CFE /* iconExport@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58591AE613C100FD0CFE /* iconExport@2x.png */; };
+		270C587C1AE613C100FD0CFE /* iconExport@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C585A1AE613C100FD0CFE /* iconExport@3x.png */; };
+		270C587D1AE613C100FD0CFE /* iconMenuBalloons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C585B1AE613C100FD0CFE /* iconMenuBalloons@2x.png */; };
+		270C587E1AE613C100FD0CFE /* iconMenuBalloons@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C585C1AE613C100FD0CFE /* iconMenuBalloons@3x.png */; };
+		270C587F1AE613C100FD0CFE /* IconMove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C585D1AE613C100FD0CFE /* IconMove@2x.png */; };
+		270C58801AE613C100FD0CFE /* IconMove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C585E1AE613C100FD0CFE /* IconMove@3x.png */; };
+		270C58811AE613C100FD0CFE /* iconMoveView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C585F1AE613C100FD0CFE /* iconMoveView@2x.png */; };
+		270C58821AE613C100FD0CFE /* iconMoveView@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58601AE613C100FD0CFE /* iconMoveView@3x.png */; };
+		270C58831AE613C100FD0CFE /* iconOvalDash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58611AE613C100FD0CFE /* iconOvalDash@2x.png */; };
+		270C58841AE613C100FD0CFE /* iconOvalDash@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58621AE613C100FD0CFE /* iconOvalDash@3x.png */; };
+		270C58851AE613C100FD0CFE /* iconPointer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58631AE613C100FD0CFE /* iconPointer@2x.png */; };
+		270C58861AE613C100FD0CFE /* iconPointer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58641AE613C100FD0CFE /* iconPointer@3x.png */; };
+		270C58871AE613C100FD0CFE /* iconRemoveBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58651AE613C100FD0CFE /* iconRemoveBubble@2x.png */; };
+		270C58881AE613C100FD0CFE /* iconRemoveBubble@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58661AE613C100FD0CFE /* iconRemoveBubble@3x.png */; };
+		270C58891AE613C100FD0CFE /* iconSquare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58671AE613C100FD0CFE /* iconSquare@2x.png */; };
+		270C588A1AE613C100FD0CFE /* iconSquare@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58681AE613C100FD0CFE /* iconSquare@3x.png */; };
+		270C588B1AE613C100FD0CFE /* iconTextContent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C58691AE613C100FD0CFE /* iconTextContent@2x.png */; };
+		270C588C1AE613C100FD0CFE /* iconTextContent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C586A1AE613C100FD0CFE /* iconTextContent@3x.png */; };
+		270C588D1AE613C100FD0CFE /* iconTextEdit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C586B1AE613C100FD0CFE /* iconTextEdit@2x.png */; };
+		270C588E1AE613C100FD0CFE /* iconTextEdit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270C586C1AE613C100FD0CFE /* iconTextEdit@3x.png */; };
 		27F843251AE56330009F8393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843241AE56330009F8393 /* main.m */; };
 		27F843281AE56330009F8393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F843271AE56330009F8393 /* AppDelegate.m */; };
 		27F8432E1AE56330009F8393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F8432C1AE56330009F8393 /* Main.storyboard */; };
@@ -32,6 +69,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270C583A1AE60AD900FD0CFE /* humanLove.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = humanLove.jpg; sourceTree = "<group>"; };
+		270C58451AE6127500FD0CFE /* VMColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMColorPickerView.h; sourceTree = "<group>"; };
+		270C58461AE6127500FD0CFE /* VMColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMColorPickerView.m; sourceTree = "<group>"; };
+		270C58471AE6127500FD0CFE /* VMEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMEditView.h; sourceTree = "<group>"; };
+		270C58481AE6127500FD0CFE /* VMEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMEditView.m; sourceTree = "<group>"; };
+		270C584B1AE613C100FD0CFE /* iconBubbleCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleCircle@2x.png"; sourceTree = "<group>"; };
+		270C584C1AE613C100FD0CFE /* iconBubbleCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleCircle@3x.png"; sourceTree = "<group>"; };
+		270C584D1AE613C100FD0CFE /* iconBubbleCloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleCloud@2x.png"; sourceTree = "<group>"; };
+		270C584E1AE613C100FD0CFE /* iconBubbleCloud@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleCloud@3x.png"; sourceTree = "<group>"; };
+		270C584F1AE613C100FD0CFE /* iconBubbleOval@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleOval@2x.png"; sourceTree = "<group>"; };
+		270C58501AE613C100FD0CFE /* iconBubbleOval@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleOval@3x.png"; sourceTree = "<group>"; };
+		270C58511AE613C100FD0CFE /* iconBubbleSquares@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleSquares@2x.png"; sourceTree = "<group>"; };
+		270C58521AE613C100FD0CFE /* iconBubbleSquares@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleSquares@3x.png"; sourceTree = "<group>"; };
+		270C58531AE613C100FD0CFE /* iconBubbleStars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleStars@2x.png"; sourceTree = "<group>"; };
+		270C58541AE613C100FD0CFE /* iconBubbleStars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBubbleStars@3x.png"; sourceTree = "<group>"; };
+		270C58551AE613C100FD0CFE /* iconChangeBackgroundBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconChangeBackgroundBubble@2x.png"; sourceTree = "<group>"; };
+		270C58561AE613C100FD0CFE /* iconChangeBackgroundBubble@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconChangeBackgroundBubble@3x.png"; sourceTree = "<group>"; };
+		270C58571AE613C100FD0CFE /* iconChangeBoderColor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconChangeBoderColor@2x.png"; sourceTree = "<group>"; };
+		270C58581AE613C100FD0CFE /* iconChangeBoderColor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconChangeBoderColor@3x.png"; sourceTree = "<group>"; };
+		270C58591AE613C100FD0CFE /* iconExport@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconExport@2x.png"; sourceTree = "<group>"; };
+		270C585A1AE613C100FD0CFE /* iconExport@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconExport@3x.png"; sourceTree = "<group>"; };
+		270C585B1AE613C100FD0CFE /* iconMenuBalloons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconMenuBalloons@2x.png"; sourceTree = "<group>"; };
+		270C585C1AE613C100FD0CFE /* iconMenuBalloons@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconMenuBalloons@3x.png"; sourceTree = "<group>"; };
+		270C585D1AE613C100FD0CFE /* IconMove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconMove@2x.png"; sourceTree = "<group>"; };
+		270C585E1AE613C100FD0CFE /* IconMove@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconMove@3x.png"; sourceTree = "<group>"; };
+		270C585F1AE613C100FD0CFE /* iconMoveView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconMoveView@2x.png"; sourceTree = "<group>"; };
+		270C58601AE613C100FD0CFE /* iconMoveView@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconMoveView@3x.png"; sourceTree = "<group>"; };
+		270C58611AE613C100FD0CFE /* iconOvalDash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconOvalDash@2x.png"; sourceTree = "<group>"; };
+		270C58621AE613C100FD0CFE /* iconOvalDash@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconOvalDash@3x.png"; sourceTree = "<group>"; };
+		270C58631AE613C100FD0CFE /* iconPointer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconPointer@2x.png"; sourceTree = "<group>"; };
+		270C58641AE613C100FD0CFE /* iconPointer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconPointer@3x.png"; sourceTree = "<group>"; };
+		270C58651AE613C100FD0CFE /* iconRemoveBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconRemoveBubble@2x.png"; sourceTree = "<group>"; };
+		270C58661AE613C100FD0CFE /* iconRemoveBubble@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconRemoveBubble@3x.png"; sourceTree = "<group>"; };
+		270C58671AE613C100FD0CFE /* iconSquare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconSquare@2x.png"; sourceTree = "<group>"; };
+		270C58681AE613C100FD0CFE /* iconSquare@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconSquare@3x.png"; sourceTree = "<group>"; };
+		270C58691AE613C100FD0CFE /* iconTextContent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTextContent@2x.png"; sourceTree = "<group>"; };
+		270C586A1AE613C100FD0CFE /* iconTextContent@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTextContent@3x.png"; sourceTree = "<group>"; };
+		270C586B1AE613C100FD0CFE /* iconTextEdit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTextEdit@2x.png"; sourceTree = "<group>"; };
+		270C586C1AE613C100FD0CFE /* iconTextEdit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTextEdit@3x.png"; sourceTree = "<group>"; };
 		27F8431F1AE56330009F8393 /* VMBubbleComitText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMBubbleComitText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F843231AE56330009F8393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F843241AE56330009F8393 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,6 +151,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270C57F51AE6094900FD0CFE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				270C583A1AE60AD900FD0CFE /* humanLove.jpg */,
+				270C584B1AE613C100FD0CFE /* iconBubbleCircle@2x.png */,
+				270C584C1AE613C100FD0CFE /* iconBubbleCircle@3x.png */,
+				270C584D1AE613C100FD0CFE /* iconBubbleCloud@2x.png */,
+				270C584E1AE613C100FD0CFE /* iconBubbleCloud@3x.png */,
+				270C584F1AE613C100FD0CFE /* iconBubbleOval@2x.png */,
+				270C58501AE613C100FD0CFE /* iconBubbleOval@3x.png */,
+				270C58511AE613C100FD0CFE /* iconBubbleSquares@2x.png */,
+				270C58521AE613C100FD0CFE /* iconBubbleSquares@3x.png */,
+				270C58531AE613C100FD0CFE /* iconBubbleStars@2x.png */,
+				270C58541AE613C100FD0CFE /* iconBubbleStars@3x.png */,
+				270C58551AE613C100FD0CFE /* iconChangeBackgroundBubble@2x.png */,
+				270C58561AE613C100FD0CFE /* iconChangeBackgroundBubble@3x.png */,
+				270C58571AE613C100FD0CFE /* iconChangeBoderColor@2x.png */,
+				270C58581AE613C100FD0CFE /* iconChangeBoderColor@3x.png */,
+				270C58591AE613C100FD0CFE /* iconExport@2x.png */,
+				270C585A1AE613C100FD0CFE /* iconExport@3x.png */,
+				270C585B1AE613C100FD0CFE /* iconMenuBalloons@2x.png */,
+				270C585C1AE613C100FD0CFE /* iconMenuBalloons@3x.png */,
+				270C585D1AE613C100FD0CFE /* IconMove@2x.png */,
+				270C585E1AE613C100FD0CFE /* IconMove@3x.png */,
+				270C585F1AE613C100FD0CFE /* iconMoveView@2x.png */,
+				270C58601AE613C100FD0CFE /* iconMoveView@3x.png */,
+				270C58611AE613C100FD0CFE /* iconOvalDash@2x.png */,
+				270C58621AE613C100FD0CFE /* iconOvalDash@3x.png */,
+				270C58631AE613C100FD0CFE /* iconPointer@2x.png */,
+				270C58641AE613C100FD0CFE /* iconPointer@3x.png */,
+				270C58651AE613C100FD0CFE /* iconRemoveBubble@2x.png */,
+				270C58661AE613C100FD0CFE /* iconRemoveBubble@3x.png */,
+				270C58671AE613C100FD0CFE /* iconSquare@2x.png */,
+				270C58681AE613C100FD0CFE /* iconSquare@3x.png */,
+				270C58691AE613C100FD0CFE /* iconTextContent@2x.png */,
+				270C586A1AE613C100FD0CFE /* iconTextContent@3x.png */,
+				270C586B1AE613C100FD0CFE /* iconTextEdit@2x.png */,
+				270C586C1AE613C100FD0CFE /* iconTextEdit@3x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		27F843161AE56330009F8393 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +214,7 @@
 		27F843211AE56330009F8393 /* VMBubbleComitText */ = {
 			isa = PBXGroup;
 			children = (
+				270C57F51AE6094900FD0CFE /* Images */,
 				27F8434C1AE565E0009F8393 /* Make Bubble */,
 				27F8434B1AE565CF009F8393 /* Bubble */,
 				27F843261AE56330009F8393 /* AppDelegate.h */,
@@ -154,6 +273,10 @@
 				27F843541AE56739009F8393 /* VMBoderArrow.m */,
 				27F843561AE5674E009F8393 /* VMFrame.h */,
 				27F843571AE5674E009F8393 /* VMFrame.m */,
+				270C58451AE6127500FD0CFE /* VMColorPickerView.h */,
+				270C58461AE6127500FD0CFE /* VMColorPickerView.m */,
+				270C58471AE6127500FD0CFE /* VMEditView.h */,
+				270C58481AE6127500FD0CFE /* VMEditView.m */,
 				27F843591AE5676F009F8393 /* VMBubbleText.h */,
 				27F8435A1AE5676F009F8393 /* VMBubbleText.m */,
 			);
@@ -240,9 +363,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270C58841AE613C100FD0CFE /* iconOvalDash@3x.png in Resources */,
+				270C58701AE613C100FD0CFE /* iconBubbleCloud@3x.png in Resources */,
+				270C586F1AE613C100FD0CFE /* iconBubbleCloud@2x.png in Resources */,
+				270C587C1AE613C100FD0CFE /* iconExport@3x.png in Resources */,
+				270C58861AE613C100FD0CFE /* iconPointer@3x.png in Resources */,
+				270C58811AE613C100FD0CFE /* iconMoveView@2x.png in Resources */,
+				270C58821AE613C100FD0CFE /* iconMoveView@3x.png in Resources */,
 				27F8432E1AE56330009F8393 /* Main.storyboard in Resources */,
 				27F843331AE56330009F8393 /* LaunchScreen.xib in Resources */,
 				27F843301AE56330009F8393 /* Images.xcassets in Resources */,
+				270C583B1AE60AD900FD0CFE /* humanLove.jpg in Resources */,
+				270C58791AE613C100FD0CFE /* iconChangeBoderColor@2x.png in Resources */,
+				270C587D1AE613C100FD0CFE /* iconMenuBalloons@2x.png in Resources */,
+				270C588E1AE613C100FD0CFE /* iconTextEdit@3x.png in Resources */,
+				270C586E1AE613C100FD0CFE /* iconBubbleCircle@3x.png in Resources */,
+				270C58771AE613C100FD0CFE /* iconChangeBackgroundBubble@2x.png in Resources */,
+				270C588A1AE613C100FD0CFE /* iconSquare@3x.png in Resources */,
+				270C587A1AE613C100FD0CFE /* iconChangeBoderColor@3x.png in Resources */,
+				270C586D1AE613C100FD0CFE /* iconBubbleCircle@2x.png in Resources */,
+				270C58891AE613C100FD0CFE /* iconSquare@2x.png in Resources */,
+				270C58801AE613C100FD0CFE /* IconMove@3x.png in Resources */,
+				270C587B1AE613C100FD0CFE /* iconExport@2x.png in Resources */,
+				270C588C1AE613C100FD0CFE /* iconTextContent@3x.png in Resources */,
+				270C58761AE613C100FD0CFE /* iconBubbleStars@3x.png in Resources */,
+				270C58751AE613C100FD0CFE /* iconBubbleStars@2x.png in Resources */,
+				270C58731AE613C100FD0CFE /* iconBubbleSquares@2x.png in Resources */,
+				270C587F1AE613C100FD0CFE /* IconMove@2x.png in Resources */,
+				270C58721AE613C100FD0CFE /* iconBubbleOval@3x.png in Resources */,
+				270C58881AE613C100FD0CFE /* iconRemoveBubble@3x.png in Resources */,
+				270C588B1AE613C100FD0CFE /* iconTextContent@2x.png in Resources */,
+				270C58871AE613C100FD0CFE /* iconRemoveBubble@2x.png in Resources */,
+				270C58851AE613C100FD0CFE /* iconPointer@2x.png in Resources */,
+				270C58831AE613C100FD0CFE /* iconOvalDash@2x.png in Resources */,
+				270C58711AE613C100FD0CFE /* iconBubbleOval@2x.png in Resources */,
+				270C587E1AE613C100FD0CFE /* iconMenuBalloons@3x.png in Resources */,
+				270C58781AE613C100FD0CFE /* iconChangeBackgroundBubble@3x.png in Resources */,
+				270C588D1AE613C100FD0CFE /* iconTextEdit@2x.png in Resources */,
+				270C58741AE613C100FD0CFE /* iconBubbleSquares@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +419,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				27F8434F1AE56616009F8393 /* VMBubble.m in Sources */,
+				270C584A1AE6127500FD0CFE /* VMEditView.m in Sources */,
 				27F843281AE56330009F8393 /* AppDelegate.m in Sources */,
 				27F8434A1AE563E8009F8393 /* VMHomeViewController.m in Sources */,
 				27F843551AE56739009F8393 /* VMBoderArrow.m in Sources */,
 				27F843581AE5674E009F8393 /* VMFrame.m in Sources */,
+				270C58491AE6127500FD0CFE /* VMColorPickerView.m in Sources */,
 				27F8435B1AE5676F009F8393 /* VMBubbleText.m in Sources */,
 				27F843521AE566F0009F8393 /* VMArrow.m in Sources */,
 				27F843251AE56330009F8393 /* main.m in Sources */,
@@ -462,6 +622,7 @@
 				27F843441AE56330009F8393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27F843451AE56330009F8393 /* Build configuration list for PBXNativeTarget "VMBubbleComitTextTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +631,7 @@
 				27F843471AE56330009F8393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
