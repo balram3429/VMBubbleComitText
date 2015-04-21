@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "VMBubble.h"
 @interface VMFrame : UIView
-
+@property (nonatomic) CGFloat border;
+@property (nonatomic) UIColor *backgroundColor;
+@property (nonatomic) UIColor *boderColor;
+@property (nonatomic) NSInteger type;
 @end
