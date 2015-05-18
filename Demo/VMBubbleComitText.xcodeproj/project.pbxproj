@@ -215,8 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				270C57F51AE6094900FD0CFE /* Images */,
-				27F8434C1AE565E0009F8393 /* Make Bubble */,
-				27F8434B1AE565CF009F8393 /* Bubble */,
+				27F8434C1AE565E0009F8393 /* VMBubbleComicText */,
+				27F8434B1AE565CF009F8393 /* VMBubbleBase */,
 				27F843261AE56330009F8393 /* AppDelegate.h */,
 				27F843271AE56330009F8393 /* AppDelegate.m */,
 				27F8432C1AE56330009F8393 /* Main.storyboard */,
@@ -255,16 +255,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		27F8434B1AE565CF009F8393 /* Bubble */ = {
+		27F8434B1AE565CF009F8393 /* VMBubbleBase */ = {
 			isa = PBXGroup;
 			children = (
 				27F8434D1AE56616009F8393 /* VMBubble.h */,
 				27F8434E1AE56616009F8393 /* VMBubble.m */,
 			);
-			name = Bubble;
+			name = VMBubbleBase;
 			sourceTree = "<group>";
 		};
-		27F8434C1AE565E0009F8393 /* Make Bubble */ = {
+		27F8434C1AE565E0009F8393 /* VMBubbleComicText */ = {
 			isa = PBXGroup;
 			children = (
 				27F843501AE566F0009F8393 /* VMArrow.h */,
@@ -280,7 +280,7 @@
 				27F843591AE5676F009F8393 /* VMBubbleText.h */,
 				27F8435A1AE5676F009F8393 /* VMBubbleText.m */,
 			);
-			name = "Make Bubble";
+			name = VMBubbleComicText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

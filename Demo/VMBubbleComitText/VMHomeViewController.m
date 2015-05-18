@@ -525,7 +525,6 @@
             break;
         }
     }
-    
     switch (self.typeOfChange) {
         case 1:
             [drawBu.textView setTextColor:color];
