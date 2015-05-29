@@ -369,7 +369,7 @@
                 [self.panView setCenter:[drawBu returnCenterLocationView]];
                 [self.editView setCenter:CGPointMake(drawBu.center.x, drawBu.center.y - drawBu.bounds.size.height/2 - self.editView.bounds.size.height/2)];
                 self.currentCenter = drawBu.center;
-                if (drawBu.typeOfBubble == 8) {
+                if (drawBu.typeOfBubble == VMBubbleTypeWhiteBoard) {
                     [self.panView setAlpha:0];
                 }
                 
@@ -410,7 +410,7 @@
         
     }
     
-    if (bubbleTest.typeOfBubble == 8) {
+    if (bubbleTest.typeOfBubble == VMBubbleTypeWhiteBoard) {
         [self.panView setAlpha:0];
     }
     

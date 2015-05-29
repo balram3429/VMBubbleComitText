@@ -15,6 +15,17 @@
 @protocol VMBubbleTextDelegate;
 @interface VMBubbleText : UIView <UITextViewDelegate>
 
+typedef NS_ENUM(NSInteger, VMBubbleType) {
+    VMBubbleTypeDefault = 1,
+    VMBubbleTypeCloud,
+    VMBubbleTypeRoundedCorner,
+    VMBubbleTypeRectangle,
+    VMBubbleTypeShock,
+    VMBubbleTypeBrokenBorder,
+    VMBubbleTypeArrowHead,
+    VMBubbleTypeWhiteBoard
+};
+
 @property (nonatomic) id<VMBubbleTextDelegate>delegate;
 -(void)initBubbleOval;
 -(void)initTextbox;
@@ -26,7 +37,7 @@
 @property (nonatomic) UIColor *backgroundColor;
 @property (nonatomic) UIColor *boderColor;
 @property (nonatomic) UITextView *textView;
-@property (nonatomic) NSInteger typeOfBubble;
+@property (nonatomic) VMBubbleType typeOfBubble;
 
 -(void)editTextWithKeyboard;
 -(void)showPanResizeView;

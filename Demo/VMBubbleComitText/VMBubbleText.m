@@ -106,28 +106,28 @@
     CGRect rect;
     
     switch (self.typeOfBubble) {
-        case 1:
+        case VMBubbleTypeDefault:
             rect =CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.08974 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.27523 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.90598 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.08974 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.73394 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.27523 + 0.5));
             break;
-        case 2:
+        case VMBubbleTypeCloud:
             rect = CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.15812 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.28058 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.83761 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.15812 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.69784 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.28058 + 0.5));
             break;
-        case 3:
+        case VMBubbleTypeRoundedCorner:
             rect = CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.12329 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.20833 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.87671 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.12329 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.78125 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.20833 + 0.5));
             break;
-        case 4:
+        case VMBubbleTypeRectangle:
             rect = CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.05430 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.13265 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.94118 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.05430 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.86735 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.13265 + 0.5));
             break;
-        case 5:
+        case VMBubbleTypeShock:
             rect =  CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.17568 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.29808 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.81982 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.17568 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.69231 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.29808 + 0.5));
             break;
-        case 6:
+        case VMBubbleTypeBrokenBorder:
             rect =  CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.07143 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.29524 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.92857 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.07143 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.69524 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.29524 + 0.5));
             break;
-        case 7:
+        case VMBubbleTypeArrowHead:
             rect = CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.05430 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.13265 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.94118 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.05430 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.86735 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.13265 + 0.5));
             break;
-        case 8:
+        case VMBubbleTypeWhiteBoard:
             rect = CGRectMake(CGRectGetMinX(self.frameOval.frame) + floor(CGRectGetWidth(self.frameOval.frame) * 0.05430 + 0.5), CGRectGetMinY(self.frameOval.frame) + floor(CGRectGetHeight(self.frameOval.frame) * 0.13265 + 0.5), floor(CGRectGetWidth(self.frameOval.frame) * 0.94118 + 0.5) - floor(CGRectGetWidth(self.frameOval.frame) * 0.05430 + 0.5), floor(CGRectGetHeight(self.frameOval.frame) * 0.86735 + 0.5) - floor(CGRectGetHeight(self.frameOval.frame) * 0.13265 + 0.5));
             break;
         default:
@@ -171,7 +171,7 @@
 -(void)moveArrowWithCenterPanView:(CGPoint)center
 {
     // rotate
-    if (self.typeOfBubble == 1 || self.typeOfBubble == 3 ||self.typeOfBubble == 4 ||self.typeOfBubble == 5 || self.typeOfBubble == 7 ) {
+    if (self.typeOfBubble == VMBubbleTypeDefault || self.typeOfBubble == VMBubbleTypeRoundedCorner ||self.typeOfBubble == VMBubbleTypeRectangle ||self.typeOfBubble == VMBubbleTypeShock || self.typeOfBubble == VMBubbleTypeArrowHead ) {
         CGPoint p0 = self.centerOfPanView;
         CGPoint p1 = center;
         CGFloat f = [self pointPairToBearingDegrees:p0 secondPoint:p1];
@@ -187,7 +187,7 @@
         self.currentRotateValue =f+90;
         self.currentScaleValue = distance/self.arrow.bounds.size.height;
     }
-    if (self.typeOfBubble == 2|| self.typeOfBubble == 6) {
+    if (self.typeOfBubble == VMBubbleTypeCloud|| self.typeOfBubble == VMBubbleTypeBrokenBorder) {
         CGPoint p0 = self.centerOfPanView;
         CGPoint p1 = center;
         CGFloat f = [self pointPairToBearingDegrees:p0 secondPoint:p1];
